@@ -1,9 +1,13 @@
 <?
+$PERM["bitrix"]["8"]="D";
+$PERM["/"]["8"]="D";
+$PERM["/"]["6"]="D";
+$PERM["/"]["7"]="D";
+$PERM["/"]["*"]="R";
 $PERM["lichnyy-kabinet-pokupatelya"]["6"]="R";
 $PERM["lichnyy-kabinet-pokupatelya"]["*"]="D";
 $PERM["lichnyy-kabinet-prodavtsa"]["7"]="R";
 $PERM["lichnyy-kabinet-prodavtsa"]["*"]="D";
 $PERM["search"]["5"]="W";
 $PERM["index.php"]["5"]="W";
-$PERM["/"]["*"]="R";
 ?>
