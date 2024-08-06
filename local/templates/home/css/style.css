@@ -345,13 +345,13 @@ a:hover {
 }
 
 .site-loader {
-  /*position: fixed;*/
+  position: fixed;
   left: 0px;
   top: 0px;
   width: 100%;
   height: 100%;
   z-index: 9999;
-  /*background: url('../images/loader.gif') center no-repeat #fff;*/
+  background: url('../images/loader.gif') center no-repeat #fff;
 }
 
 /* Navbar */
