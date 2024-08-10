@@ -16,13 +16,8 @@ $MESS['Contact'] = "Contact";
 $MESS['Wide_Range_of_Properties'] = "Wide Range of Properties";
 $MESS['Rent_or_Sale'] = "Rent or Sale";
 $MESS['Property_Location'] = "Property Location";
-$MESS['New_Properties_for_You'] = "New Properties for You";
 
-$MESS['Our_Services'] = "Our Services";
-$MESS['Research_Subburbs'] = "Research Subburbs";
-$MESS['Sold_Houses'] = "Sold Houses";
-$MESS['Security_Priority'] = "Security Priority";
-$MESS['Learn_More'] = "Learn More";
-$MESS['Our_Blog'] = "Our Blog";
+
+
 
 ?>

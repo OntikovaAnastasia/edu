@@ -16,12 +16,6 @@ $MESS['Contact'] = "Контакты";
 $MESS['Wide_Range_of_Properties'] = "Широкий спектр объектов недвижимости";
 $MESS['Rent_or_Sale'] = "Аренда или продажа";
 $MESS['Property_Location'] = "Местоположение объекта недвижимости";
-$MESS['New_Properties_for_You'] = "Новые объекты недвижимости для Вас";
-$MESS['Our_Services'] = "Наши услуги";
-$MESS['Research_Subburbs'] = "Исследуйте пригороды";
-$MESS['Sold_Houses'] = "Проданные дома";
-$MESS['Security_Priority'] = "Приоритет безопасности";
-$MESS['Learn_More'] = "Подробнее";
-$MESS['Our_Blog'] = "Наш блог";
+
 
 ?>

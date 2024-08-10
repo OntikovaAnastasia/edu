@@ -1,5 +1,7 @@
 <?
 use Bitrix\Main\Localization\Loc;
+Loc::loadLanguageFile(__FILE__);
+echo Loc::getMessage("SOMETHING_LANGUAGE_CONSTANT"); 
 ?>
 <footer class="site-footer">
     <div class="container">
@@ -22,39 +24,14 @@ use Bitrix\Main\Localization\Loc;
         </div>
 
         
-        <div class="col-lg-4 mb-5 mb-lg-0">
-          
-          <div class="row mb-5">
-            <div class="col-md-12">
-              <h3 class="footer-heading mb-4"><?= Loc::getMessage('Navigations')?></h3>
-            </div>
-            <div class="col-md-6 col-lg-6">
-              <ul class="list-unstyled">
-                <li><a href="#"><?= Loc::getMessage('Home')?></a></li>
-                <li><a href="#"><?= Loc::getMessage('Buy')?></a></li>
-                <li><a href="#"><?= Loc::getMessage('Rent')?></a></li>
-                <li><a href="#"><?= Loc::getMessage('Properties')?></a></li>
-              </ul>
-            </div>
-            <div class="col-md-6 col-lg-6">
-              <ul class="list-unstyled">
-                <li><a href="#"><?= Loc::getMessage('About')?></a></li>
-                <li><a href="#"><?= Loc::getMessage('Privacy_Policy')?></a></li>
-                <li><a href="#"><?= Loc::getMessage('Contact')?></a></li>
-                <li><a href="#"><?= Loc::getMessage('Terms')?></a></li>
-              </ul>
-            </div>
-          </div>
-
-
-          <br>
+ 
  <?$APPLICATION->IncludeComponent(
 	"bitrix:menu", 
-	"store_v3_bottom", 
+	"footer_menu", 
 	array(
 		"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "left",
-		"COMPONENT_TEMPLATE" => "store_v3_bottom",
+		"COMPONENT_TEMPLATE" => "footer_menu",
 		"DELAY" => "N",
 		"MAX_LEVEL" => "1",
 		"MENU_CACHE_GET_VARS" => array(
@@ -70,8 +47,6 @@ use Bitrix\Main\Localization\Loc;
 );?><br>
 
 
-
-        </div>
 
 
 
