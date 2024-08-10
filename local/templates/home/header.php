@@ -59,16 +59,16 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/style.css");?>
             <p class="mb-0">
               <a href="#" class="mr-3"><span class="text-black fl-bigmug-line-phone351"></span> <span
                   class="d-none d-md-inline-block ml-2">
-                  <?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "/include/phone.php"
-	)
- );?></span></a>
+				<?$APPLICATION->IncludeComponent(
+				"bitrix:main.include",
+				"",
+				Array(
+					"AREA_FILE_SHOW" => "file",
+					"AREA_FILE_SUFFIX" => "inc",
+					"EDIT_TEMPLATE" => "",
+					"PATH" => "/include/phone.php"
+				)
+				);?></span></a>
               <a href="#"><span class="text-black fl-bigmug-line-email64"></span> <span
                   class="d-none d-md-inline-block ml-2">
                   <?$APPLICATION->IncludeComponent(
@@ -122,5 +122,16 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/style.css");?>
 );?>
   </div>
 
+<? if ($APPLICATION->GetCurPage(false) !== '/'): ?>
+	<?$APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb",
+	"nav",
+	Array(
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0"
+	)
+);?>
+<? endif; ?>
   
 

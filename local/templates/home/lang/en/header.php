@@ -17,7 +17,7 @@ $MESS['Wide_Range_of_Properties'] = "Wide Range of Properties";
 $MESS['Rent_or_Sale'] = "Rent or Sale";
 $MESS['Property_Location'] = "Property Location";
 
+$MESS['Our_Company'] = "Our Company";
 
-
-
+$MESS['Kontakty'] = "Kontakty";
 ?>
