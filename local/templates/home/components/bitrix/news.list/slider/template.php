@@ -16,33 +16,26 @@ $this->setFrameMode(true);
 use Bitrix\Main\Localization\Loc;
 ?>
 
-
 <div class="slide-one-item home-slider owl-carousel">
-
-<?foreach($arResult["ITEMS"] as $arItem):?>
-	<?
-	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_EDIT"));
-	$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('NEWS_DELETE_CONFIRM')));
-	?>
-<div id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-	<?if (is_array($arItem["PREVIEW_PICTURE"])):?>
-	<div class="site-blocks-cover" style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>);" data-aos="fade"
-  data-stellar-background-ratio="0.5">
-	<?endif?>
-  <div class="text">
-	<h2><?echo $arItem["NAME"]?></h2>
-	<p class="location"><span class="property-icon icon-room"></span><?echo $arItem["PREVIEW_TEXT"];?></p>
-	<p class="mb-2"><strong><?=$arItem["DISPLAY_PROPERTIES"]['PRICE']['VALUE'];?>₽</strong></p>
-
-
-	<p class="mb-0"><a href="<?echo $arItem["DETAIL_PAGE_URL"]?>?>" class="text-uppercase small letter-spacing-1 font-weight-bold"><?= Loc::getMessage('More_Details')?></a></p>
-  </div>
-</div>
-
-</div>
-<?endforeach;?>
-
-
+	<?foreach($arResult["ITEMS"] as $arItem):?>
+		<?
+		$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_EDIT"));
+		$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('NEWS_DELETE_CONFIRM')));
+		?>
+		<div id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+			<?if (is_array($arItem["PREVIEW_PICTURE"])):?>
+			<div class="site-blocks-cover" style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>);" data-aos="fade"
+		data-stellar-background-ratio="0.5">
+			<?endif?>
+		<div class="text">
+			<h2><?echo $arItem["NAME"]?></h2>
+			<p class="location"><span class="property-icon icon-room"></span><?echo $arItem["PREVIEW_TEXT"];?></p>
+			<p class="mb-2"><strong><?=$arItem["DISPLAY_PROPERTIES"]['PRICE']['VALUE'];?>₽</strong></p>
+			<p class="mb-0"><a href="<?echo $arItem["DETAIL_PAGE_URL"]?>?>" class="text-uppercase small letter-spacing-1 font-weight-bold"><?= Loc::getMessage('More_Details')?></a></p>
+		</div>
+		</div>
+		</div>
+	<?endforeach;?>
 </div>
 
 

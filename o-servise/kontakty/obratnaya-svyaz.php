@@ -11,4 +11,6 @@ $APPLICATION->SetTitle("Обратная связь");
 		"REQUIRED_FIELDS" => array(),
 		"USE_CAPTCHA" => "Y"
 	)
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+<?$APPLICATION->AddChainItem($APPLICATION->GetTitle());?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

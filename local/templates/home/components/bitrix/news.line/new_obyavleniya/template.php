@@ -18,10 +18,7 @@ use Bitrix\Main\Localization\Loc;
 <?
 use Bitrix\Catalog\PriceTable;
 use Bitrix\Main\Loader;
-
 ?>
-
-
 <div class="site-section site-section-sm bg-light">
 	<div class="container">
 		<div class="row mb-5">
@@ -37,14 +34,11 @@ use Bitrix\Main\Loader;
 				$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_EDIT"));
 				$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('NEWS_DELETE_CONFIRM')));
 				?>
-		
-		
 			<div id="<?=$this->GetEditAreaId($arItem['ID']);?>" class="col-md-6 col-lg-4 mb-4">
-		
- 		<a href="<?echo $arItem["DETAIL_PAGE_URL"]?>" class="prop-entry d-block"> <figure> <img alt="Image" src="<?echo $arItem["PREVIEW_PICTURE"]['SRC']?>" class="img-fluid"> </figure>
+		 		<a href="<?echo $arItem["DETAIL_PAGE_URL"]?>" class="prop-entry d-block"> <figure> <img alt="Image" src="<?echo $arItem["PREVIEW_PICTURE"]['SRC']?>" class="img-fluid"> </figure>
 				<div class="prop-text">
 					<div class="inner">
- 	<span class="price rounded">1,930,000₽</span>
+ 						<span class="price rounded"><?echo $arItem["PROPERTY_PRICE_VALUE"]?>₽</span>
 						<h3 class="title"><?echo $arItem["NAME"]?></h3>
 						<p class="location">
 						<?echo $arItem["PREVIEW_TEXT"]?>
@@ -53,29 +47,24 @@ use Bitrix\Main\Loader;
 					<div class="prop-more-info">
 						<div class="inner d-flex">
 							<div class="col">
-							<?= Loc::getMessage('Area')?>: <strong>240m<sup>2</sup></strong>
+							<?= Loc::getMessage('Area')?>: <strong><?echo $arItem["PROPERTY_AREA_VALUE"]?>м<sup>2</sup></strong>
 							</div>
 							<div class="col">
-							<?= Loc::getMessage('Floor')?>: <strong>2</strong>
+							<?= Loc::getMessage('Floor')?>: <strong><?echo $arItem["PROPERTY_NUM_FLOOR_VALUE"]?></strong>
 							</div>
 							<div class="col">
-							<?= Loc::getMessage('Bath')?>: <strong>2</strong>
+							<?= Loc::getMessage('Bath')?>: <strong><?echo $arItem["PROPERTY_NUM_BATHROOM_VALUE"]?></strong>
 							</div>
 							<div class="col">
-							<?= Loc::getMessage('Garages')?>: <strong>1</strong>
+							<?= Loc::getMessage('Garages')?>: <strong><?echo $arItem["PROPERTY_GARAGE_VALUE"]?></strong>
 							</div>
 						</div>
 					</div>
 				</div>
- </a>
+ 				</a>
 			</div>
-			
-		
-		
 			<?endforeach;?>
-
-		</div>	
-		
+		</div>		
 	</div>
 </div>
 

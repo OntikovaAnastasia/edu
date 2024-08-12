@@ -1,7 +1,7 @@
 <?
 use Bitrix\Main\Localization\Loc;
 ?>
-<h3 class="footer-heading mb-4"><?= Loc::getMessage('Follow_Us')?></h3>
+<h3 class="footer-heading mb-4"><?= Loc::getMessage('FOLLOW_US')?></h3>
     <div>
             <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
             <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>

@@ -10,11 +10,11 @@ use Bitrix\Main\Localization\Loc;
 ?>
 
 <?
-/*$GLOBALS['Priority_Filter'] = array("PRIORITY_DEAL" => 'Y');*/
-
-GLOBAL $Priority_Filter;
-$selectID = 5;
-$Priority_Filter = array("PROPERTY_PRIORITY_DEAL" => $selectID);
+$Priority_Filter = array (
+"IBLOCK_ID" => "5",
+"ACTIVE" => "Y",
+"PROPERTY_PRIORITY_DEAL_VALUE" => "да",
+);
 $APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"slider", 
@@ -83,9 +83,6 @@ $APPLICATION->IncludeComponent(
 	false
 );?>
 
-
-<p>
-</p>
 <div class="py-5">
 	<div class="container">
 		<div class="row">
@@ -93,43 +90,43 @@ $APPLICATION->IncludeComponent(
 				<div class="feature d-flex align-items-start">
 					
 					<?$APPLICATION->IncludeComponent(
-		"bitrix:main.include",
-		"",
-		Array(
-			"AREA_FILE_SHOW" => "file",
-			"AREA_FILE_SUFFIX" => "inc",
-			"EDIT_TEMPLATE" => "",
-			"PATH" => "/include/row_1.php"
-		)
-	);?>
+						"bitrix:main.include",
+						"",
+						Array(
+							"AREA_FILE_SHOW" => "file",
+							"AREA_FILE_SUFFIX" => "inc",
+							"EDIT_TEMPLATE" => "",
+							"PATH" => "/include/row_1.php"
+						)
+					);?>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
 				<div class="feature d-flex align-items-start">
 				<?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "/include/row_2.php"
-	)
-);?>
+					"bitrix:main.include",
+					"",
+					Array(
+						"AREA_FILE_SHOW" => "file",
+						"AREA_FILE_SUFFIX" => "inc",
+						"EDIT_TEMPLATE" => "",
+						"PATH" => "/include/row_2.php"
+					)
+				);?>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
 				<div class="feature d-flex align-items-start">
 				<?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "/include/row_3.php"
-	)
-);?>
+					"bitrix:main.include",
+					"",
+					Array(
+						"AREA_FILE_SHOW" => "file",
+						"AREA_FILE_SUFFIX" => "inc",
+						"EDIT_TEMPLATE" => "",
+						"PATH" => "/include/row_3.php"
+					)
+				);?>
 				</div>
 			</div>
 		</div>
@@ -152,7 +149,11 @@ $APPLICATION->IncludeComponent(
 			3 => "PREVIEW_PICTURE",
 			4 => "DETAIL_TEXT",
 			5 => "DETAIL_PICTURE",
-			6 => "",
+			6 => "PROPERTY_PRICE",
+			7 => "PROPERTY_AREA",
+			8 => "PROPERTY_GARAGE",
+			9 => "PROPERTY_NUM_FLOOR",
+			10 => "PROPERTY_NUM_BATHROOM",
 		),
 		"IBLOCKS" => array(
 		),
@@ -167,33 +168,32 @@ $APPLICATION->IncludeComponent(
 	false
 );?>
 
-
-
-
 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.line",
-	"services",
-	Array(
+	"bitrix:news.line", 
+	"services", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "7776000",
 		"CACHE_TYPE" => "Y",
 		"COMPONENT_TEMPLATE" => "services",
 		"DETAIL_URL" => "",
-		"FIELD_CODE" => array(0=>"PREVIEW_TEXT",1=>"",),
-		"IBLOCKS" => array(),
+		"FIELD_CODE" => array(
+			0 => "PREVIEW_TEXT",
+			1 => "PROPERTY_LINK_SERVICE",
+			2 => "PROPERTY_CLASS_ICON",
+		),
+		"IBLOCKS" => array(
+		),
 		"IBLOCK_TYPE" => "services",
 		"NEWS_COUNT" => "6",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC"
-	)
+	),
+	false
 );?>
-
-
-
-
 
 <?$APPLICATION->IncludeComponent("bitrix:news.line", "news_blog", Array(
 	"ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
@@ -220,6 +220,4 @@ $APPLICATION->IncludeComponent(
 	false
 );?>
 
-
-<p>
-</p><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
