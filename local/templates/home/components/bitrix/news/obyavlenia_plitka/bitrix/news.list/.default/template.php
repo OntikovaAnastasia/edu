@@ -16,18 +16,23 @@ $this->setFrameMode(true);
 use Bitrix\Main\Localization\Loc;
 Loc::loadLanguageFile(__FILE__);
 ?>
+
 <div class="site-section site-section-sm bg-light">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12">
             <div class="site-section-title">
-              <h2><?=Loc::getMessage("NEW_PROPERTIES")?></h2>
+              <h2><?echo $arParams["OBYAVLENIA_TITLE"]?></h2>
             </div>
           </div>
         </div>
         <div class="row mb-5">
 			<?foreach($arResult["ITEMS"] as $arItem):?>
-          <div class="col-md-6 col-lg-4 mb-4">
+        <?
+          $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_EDIT"));
+          $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('NEWS_DELETE_CONFIRM')));
+        ?>
+          <div class="col-md-6 col-lg-4 mb-4" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
             <a href="<?echo $arItem["DETAIL_PAGE_URL"]?>" class="prop-entry d-block">
               <figure>
                 <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="Image" class="img-fluid">

@@ -92,27 +92,49 @@ Loc::loadLanguageFile(__FILE__);
         </div>
       </div>
     </div>
-    <?$APPLICATION->IncludeComponent(
-		"bitrix:menu", 
-		"header_menu", 
-		array(
-			"ALLOW_MULTI_SELECT" => "N",
-			"CHILD_MENU_TYPE" => "left",
-			"COMPONENT_TEMPLATE" => "header_menu",
-			"DELAY" => "N",
-			"MAX_LEVEL" => "4",
-			"MENU_CACHE_GET_VARS" => array(
-			),
-			"MENU_CACHE_TIME" => "3600",
-			"MENU_CACHE_TYPE" => "A",
-			"MENU_CACHE_USE_GROUPS" => "Y",
-			"MENU_THEME" => "green",
-			"ROOT_MENU_TYPE" => "top",
-			"USE_EXT" => "N"
+
+
+<div class="site-navbar">
+	<div class="container py-1">
+		<div class="row align-items-center">
+			<div class="col-8 col-md-8 col-lg-4">
+				<h1 class="">
+				<?$APPLICATION->IncludeComponent(
+				"bitrix:main.include",
+					"",
+				Array(
+				"AREA_FILE_SHOW" => "file",
+				"AREA_FILE_SUFFIX" => "inc",
+				"EDIT_TEMPLATE" => "",
+				"PATH" => "/include/logo.php"
+				)
+				);?>
+				</h1>
+			</div>
+				<div class="col-4 col-md-4 col-lg-8">
+				<?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"header_menu", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"COMPONENT_TEMPLATE" => "header_menu",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "2",
+		"MENU_CACHE_GET_VARS" => array(
 		),
-		false
-    );?>
-  </div>
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_THEME" => "green",
+		"ROOT_MENU_TYPE" => "top",
+		"USE_EXT" => "N"
+	),
+	false
+);?>
+  				</div>
+				  </div></div></div>			
+
 <? if ($APPLICATION->GetCurPage(false) !== '/'): ?>
 	<?$APPLICATION->IncludeComponent(
 	"bitrix:breadcrumb",

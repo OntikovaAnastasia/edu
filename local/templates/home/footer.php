@@ -23,26 +23,28 @@ Loc::loadLanguageFile(__FILE__);
 				);?>
           </div>
         </div>
-	<?$APPLICATION->IncludeComponent(
-		"bitrix:menu", 
-		"footer_menu", 
-		array(
-			"ALLOW_MULTI_SELECT" => "N",
-			"CHILD_MENU_TYPE" => "left",
-			"COMPONENT_TEMPLATE" => "footer_menu",
-			"DELAY" => "N",
-			"MAX_LEVEL" => "1",
-			"MENU_CACHE_GET_VARS" => array(
+	<div class="col-lg-4 mb-5 mb-lg-0">	
+		<?$APPLICATION->IncludeComponent(
+			"bitrix:menu", 
+			"footer_menu", 
+			array(
+				"ALLOW_MULTI_SELECT" => "N",
+				"CHILD_MENU_TYPE" => "left",
+				"COMPONENT_TEMPLATE" => "footer_menu",
+				"DELAY" => "N",
+				"MAX_LEVEL" => "1",
+				"MENU_CACHE_GET_VARS" => array(
+				),
+				"MENU_CACHE_TIME" => "3600",
+				"MENU_CACHE_TYPE" => "A",
+				"MENU_CACHE_USE_GROUPS" => "Y",
+				"MENU_THEME" => "yellow",
+				"ROOT_MENU_TYPE" => "top",
+				"USE_EXT" => "N"
 			),
-			"MENU_CACHE_TIME" => "3600",
-			"MENU_CACHE_TYPE" => "A",
-			"MENU_CACHE_USE_GROUPS" => "Y",
-			"MENU_THEME" => "yellow",
-			"ROOT_MENU_TYPE" => "top",
-			"USE_EXT" => "N"
-		),
-		false
-	);?><br>
+			false
+		);?>
+	</div>
         <div class="col-lg-4 mb-5 mb-lg-0">
 			<?$APPLICATION->IncludeComponent(
 				"bitrix:main.include",

@@ -28,6 +28,11 @@ $arTemplateParameters = array(
 		"DEFAULT" =>"N",
 		"REFRESH"=> "Y",
 	),
+	"OBYAVLENIA_TITLE" => Array(
+		"NAME" => "Заголовок",
+		"TYPE" => "STRING",	
+	),
+
 );
 
 if (($arCurrentValues['USE_SHARE'] ?? 'N') === 'Y')

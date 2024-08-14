@@ -198,6 +198,7 @@ Loc::loadLanguageFile(__FILE__);
 		"USE_SHARE" => "N",
 		"MEDIA_PROPERTY" => "",
 		"SLIDER_PROPERTY" => "",
+		"OBYAVLENIA_TITLE" => "НОВЫЕ ОБЪЕКТЫ НЕДВИЖИМОСТИ ДЛЯ ВАС",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
@@ -205,5 +206,5 @@ Loc::loadLanguageFile(__FILE__);
 		)
 	),
 	false
-	);?>
+);?>
  <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

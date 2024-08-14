@@ -1,9 +1,18 @@
+
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Мои объявления");
-?><?$APPLICATION->IncludeComponent(
+?>
+
+<?
+$arrFilter = array(
+	"IBLOCK_ID" => "5",  
+	"CREATED_BY" => $GLOBALS['USER']->GetID(),
+	);
+
+$APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	".default", 
+	"obyavlenia_plitka", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -39,15 +48,19 @@ $APPLICATION->SetTitle("Мои объявления");
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "5",
 		"IBLOCK_TYPE" => "advertisement",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array(
-			0 => "",
+			0 => "CREATED_BY",
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "NUM_BATHROOM",
+			1 => "NUM_FLOOR",
+			2 => "GARAGE",
+			3 => "AREA",
+			4 => "PRICE",
+			5 => "",
 		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
@@ -72,23 +85,28 @@ $APPLICATION->SetTitle("Мои объявления");
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
 		"USE_CATEGORIES" => "N",
-		"USE_FILTER" => "N",
+		"USE_FILTER" => "Y",
 		"USE_PERMISSIONS" => "N",
 		"USE_RATING" => "N",
 		"USE_REVIEW" => "N",
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
-		"COMPONENT_TEMPLATE" => ".default",
+		"COMPONENT_TEMPLATE" => "obyavlenia_plitka",
 		"SEF_FOLDER" => "/lichnyy-kabinet-prodavtsa/moi-obyavleniya/",
-		"FILTER_NAME" => "",
+		"FILTER_NAME" => "arrFilter",
 		"FILTER_FIELD_CODE" => array(
-			0 => "CREATED_USER_NAME",
+			0 => "CREATED_BY",
 			1 => "",
 		),
 		"FILTER_PROPERTY_CODE" => array(
 			0 => "",
 			1 => "",
 		),
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"USE_SHARE" => "N",
+		"OBYAVLENIA_TITLE" => "Мои объявления",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
@@ -96,4 +114,5 @@ $APPLICATION->SetTitle("Мои объявления");
 		)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

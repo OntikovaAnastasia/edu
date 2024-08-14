@@ -195,27 +195,32 @@ $APPLICATION->IncludeComponent(
 	false
 );?>
 
-<?$APPLICATION->IncludeComponent("bitrix:news.line", "news_blog", Array(
-	"ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
-		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
-		"CACHE_TIME" => "604800",	// Время кеширования (сек.)
-		"CACHE_TYPE" => "Y",	// Тип кеширования
-		"DETAIL_URL" => "",	// URL, ведущий на страницу с содержимым элемента раздела
-		"FIELD_CODE" => array(	// Поля
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.line", 
+	"news_blog", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "604800",
+		"CACHE_TYPE" => "Y",
+		"DETAIL_URL" => "",
+		"FIELD_CODE" => array(
 			0 => "NAME",
 			1 => "PREVIEW_TEXT",
 			2 => "PREVIEW_PICTURE",
 			3 => "DATE_ACTIVE_FROM",
 			4 => "",
 		),
-		"IBLOCKS" => "",	// Код информационного блока
-		"IBLOCK_TYPE" => "news",	// Тип информационного блока
-		"NEWS_COUNT" => "3",	// Количество новостей на странице
-		"SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
-		"SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
-		"SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
-		"SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
-		"COMPONENT_TEMPLATE" => ".default"
+		"IBLOCKS" => array(
+			0 => "1",
+		),
+		"IBLOCK_TYPE" => "news",
+		"NEWS_COUNT" => "3",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"COMPONENT_TEMPLATE" => "news_blog"
 	),
 	false
 );?>
