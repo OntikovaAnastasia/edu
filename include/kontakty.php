@@ -3,28 +3,12 @@ use Bitrix\Main\Localization\Loc;
 Loc::loadLanguageFile(__FILE__);
 ?>
 
-<div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+<h3 class="h6 text-black mb-3 text-uppercase"><?=Loc::getMessage("CONTACT_INFO")?></h3>
+<p class="mb-0 font-weight-bold"><?=Loc::getMessage("CONTACT_ADDRESS")?></p>
+<p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
 
-<?$APPLICATION->IncludeComponent(
-	"bitrix:map.yandex.view",
-	"",
-	Array(
-		"API_KEY" => "",
-		"CONTROLS" => array("ZOOM","MINIMAP","TYPECONTROL","SCALELINE"),
-		"INIT_MAP_TYPE" => "MAP",
-		"MAP_DATA" => "a:3:{s:10:\"yandex_lat\";s:7:\"55.7383\";s:10:\"yandex_lon\";s:7:\"37.5946\";s:12:\"yandex_scale\";i:10;}",
-		"MAP_HEIGHT" => "500",
-		"MAP_ID" => "",
-		"MAP_WIDTH" => "600",
-		"OPTIONS" => array("ENABLE_SCROLL_ZOOM","ENABLE_DBLCLICK_ZOOM","ENABLE_DRAGGING")
-	)
-);?>
+<p class="mb-0 font-weight-bold"><?=Loc::getMessage("CONTACT_PHONE")?></p>
+<p class="mb-4"><a href="#">+1 232 3235 324</a></p>
 
-</div>
-<div class="col-md-5 ml-auto"  data-aos="fade-up" data-aos-delay="200">
-    <div class="site-section-title mb-3">
-     <h2><?=Loc::getMessage('KONTAKTY')?></h2>
-    </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus in cum odio.</p>
-            <p>Illum repudiandae ratione facere explicabo. Consequatur dolor optio iusto, quos autem voluptate ea? Sunt laudantium fugiat, mollitia voluptate? Modi blanditiis veniam nesciunt architecto odit voluptatum tempore impedit magnam itaque natus!</p>
-</div>
+<p class="mb-0 font-weight-bold"><?=Loc::getMessage("CONTACT_EMAIL")?></p>
+<p class="mb-0"><a href="#">youremail@domain.com</a></p>
