@@ -75,7 +75,7 @@ Loc::loadLanguageFile(__FILE__);
                 </div>
                 <div class="col-md-6 col-lg-4 text-left border-bottom border-top py-3">
                   <span class="d-inline-block text-black mb-0 caption-text"><?=Loc::getMessage("GARAGE")?></span>
-                  <strong class="d-block"><?echo $arResult["DISPLAY_PROPERTIES"]["GARAGE"]["VALUE"];?></strong>
+                  <strong class="d-block"><?echo $arResult["DISPLAY_PROPERTIES"]["GARAGE"]["VALUE"]?:"нет"?></strong>
                 </div>
               </div>
               <h2 class="h4 text-black"><?=Loc::getMessage("MORE_INFO")?></h2>

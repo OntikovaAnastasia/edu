@@ -63,7 +63,7 @@ if(!empty($arResult["OK_MESSAGE"]))
 	<input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
 <div class="row form-group">
   <div class="col-md-12">
-	<input type="submit"name="submit" value="<?=GetMessage("MFT_SUBMIT")?>" class="btn btn-primary  py-2 px-4 rounded-0"value="<?=GetMessage("MFT_SUBMIT")?>">
+	<input type="submit"name="submit" value="<?=GetMessage("SUBMIT")?>" class="btn btn-primary  py-2 px-4 rounded-0"value="<?=GetMessage("SUBMIT")?>">
   </div>
 </div>
 	

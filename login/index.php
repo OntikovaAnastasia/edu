@@ -7,7 +7,7 @@ if (is_string($_REQUEST["backurl"]) && mb_strpos($_REQUEST["backurl"], "/") === 
 	LocalRedirect($_REQUEST["backurl"]);
 }
 
-$APPLICATION->SetTitle("Вход на сайт");
+$APPLICATION->SetTitle("Авторизация");
 ?><p>Вы зарегистрированы и успешно авторизовались.</p>
 
 <p><a href="<?=SITE_DIR?>">Вернуться на главную страницу</a></p>
@@ -15,3 +15,7 @@ $APPLICATION->SetTitle("Вход на сайт");
 <?if($USER->IsAuthorized()):?>
 <a href="/?logout=yes&<?=bitrix_sessid_get()?>">Выйти</a>
 <?endif?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+
+
+
+

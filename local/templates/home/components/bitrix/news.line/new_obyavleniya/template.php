@@ -56,7 +56,7 @@ use Bitrix\Main\Loader;
 							<?= Loc::getMessage('Bath')?>: <strong><?echo $arItem["PROPERTY_NUM_BATHROOM_VALUE"]?></strong>
 							</div>
 							<div class="col">
-							<?= Loc::getMessage('Garages')?>: <strong><?echo $arItem["PROPERTY_GARAGE_VALUE"]?></strong>
+							<?= Loc::getMessage('Garages')?>: <strong><?echo $arItem["PROPERTY_GARAGE_VALUE"]?:"нет"?></strong>
 							</div>
 						</div>
 					</div>
