@@ -15,7 +15,9 @@ $this->setFrameMode(true);
 <?
 use Bitrix\Main\Localization\Loc;
 Loc::loadLanguageFile(__FILE__);
+
 ?>
+
 	<div class="pt-5">
       <div class="container">
         <form class="row">
