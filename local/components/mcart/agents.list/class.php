@@ -3,6 +3,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
 
+
 use \Bitrix\Main\Errorable;
 use \Bitrix\Main\Engine\Contract\Controllerable;
 
@@ -412,10 +413,8 @@ class AgentsList extends CBitrixComponent implements Controllerable, Errorable
         else{
             $value = $agentID;
         }
-        $file = fopen(__DIR__ . '/log.php','w');
-        fwrite($file,print_r($arView,1));
-        fclose($file);
-    CUserOptions::SetOption("mcart_agent", "options_agents_star", $arView);
+
+    CUserOptions::SetOption("mcart_agent", "options_agents_star", $value);
         $result['action']  = "success";
         return $result;
           /*

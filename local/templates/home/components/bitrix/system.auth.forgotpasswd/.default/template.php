@@ -16,7 +16,7 @@ if (!empty($arParams["~AUTH_RESULT"]))
 if ($arResult["BACKURL"] <> '')
 {
 ?>
-	<input type="hidden" name="backurl" value="<?=$arResult["BACKURL"]?>" />
+
 <?
 }
 ?>

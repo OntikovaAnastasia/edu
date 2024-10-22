@@ -18,9 +18,7 @@ function clickStar(event) {
 
 
     var agentID;
-    /*var el = document.querySelector("#agent");
-    el.dataset.id === agentID;
-   // el.dataset.id === agentID;*/
+  
    var el = document.getElementById('agent');
    agentID = el.dataset.id; 
 
@@ -55,13 +53,7 @@ function clickStar(event) {
 
                             this.classList.toggle('active');      
                            
-                            /*if (this.hasClass('active')) {
-                                localStorage.setItem('active');
-                              } else {
-                                localStorage.removeItem();
-                              }*/
 
-              //  BX.userOptions.save("mcart_agent", "options_agents_star");
                         // Отобразить пользоватиелю, что агент добавлен в избраное (желтая звездочка, есть в верстке)
                     }
 

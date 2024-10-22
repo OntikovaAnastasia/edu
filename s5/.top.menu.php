@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Компания", 
+		"company/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новости", 
+		"news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Продукция", 
+		"products/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Услуги", 
+		"services/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Партнерам", 
+		"/s5/partneram/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Отзывы", 
+		"/s5/rew/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Поиск", 
+		"/s5/search/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
